@@ -37,13 +37,21 @@
         // }
 //----End of JavaScript Style
 
-//----This is jQuery Style        
+//----This is jQuery Style    
         var drinkDiv = $("#drink-options");
         for (var i=0; i<drinkList.length; i++) {
             //console.log(drinkList[i]);
-            var newDrinkDiv = $("<div>" + drinkList[i] + "<div>");
+            var newDrinkDiv = $("<div>" + drinkList[i] + "</div>");
             drinkDiv.append(newDrinkDiv);
         }
+        
+//----Using .each() instead of for loop.  Don't know how to but <hr> between list.        
+        var drinkDiv = $("#drink-options");
+        $.each(drinkList, function(i, drink) {
+            drinkDiv.append("<div>" + drink + "</div>");
+        });
+
+        
 
 
     </script>
