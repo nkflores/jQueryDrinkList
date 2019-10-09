@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Java Script Content</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>Drink Selection</h1>
+    <hr>
+
+    <div id="drink-options"></div>
+
+    <script type="text/javascript">
+
+        var drinkList = [
+            "Coffee: $5",
+            "Expresso: $7",
+            "Cappuccino: $6",
+            "Latte: $4",
+            "Tea: $3",
+            "Ice Coffee: $6",
+            "Ice Expresso: $8",
+            "Ice Latte: $6",
+            "Ice Tea: $4",
+        ];
+//----This is JavaScript Style
+        // var drinkDiv = document.getElementById("drink-options");
+
+        // for (i = 0; i < drinkList.length; i++) {
+        //     console.log(drinkList[i]);
+        //     var newDrinkDiv = document.createElement("div");
+        //     newDrinkDiv.innerHTML = drinkList[i];
+        //     drinkDiv.appendChild(newDrinkDiv);
+        // }
+//----End of JavaScript Style
+
+//----This is jQuery Style        
+        var drinkDiv = $("#drink-options");
+        for (var i=0; i<drinkList.length; i++) {
+            //console.log(drinkList[i]);
+            var newDrinkDiv = $("<div>" + drinkList[i] + "<div>");
+            drinkDiv.append(newDrinkDiv);
+        }
+
+
+    </script>
+
+</body>
+
+</html>
